@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_name: MyString
+  contract_title: MyString
+  capes_keywords: MyString
+  project_description: MyText
+  gryphon_pd_pm: MyString
+  prime_sub: MyString
+  client: MyString
+  end_client: MyString
+  client_poc_address: MyString
+  client_poc_name_contact: MyString
+  reference: false
+  contract_number: MyString
+  contract_value: MyString
+  period_of_performance: MyString
+  notes: MyString
+
+two:
+  project_name: MyString
+  contract_title: MyString
+  capes_keywords: MyString
+  project_description: MyText
+  gryphon_pd_pm: MyString
+  prime_sub: MyString
+  client: MyString
+  end_client: MyString
+  client_poc_address: MyString
+  client_poc_name_contact: MyString
+  reference: false
+  contract_number: MyString
+  contract_value: MyString
+  period_of_performance: MyString
+  notes: MyString

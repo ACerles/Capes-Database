@@ -1,0 +1,2 @@
+module CapesHelper
+end

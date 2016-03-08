@@ -1,0 +1,94 @@
+<div class="field">
+<h2>Create a New Cape</h2> <br>
+</div>
+
+<%= form_for(@cape) do |f| %>
+    
+    <div class="field">
+        <%= f.label :project_name, "Project Name (Internal Code)" %><br>
+        <%= f.text_field :project_name, size: "100x5" %><br>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :contract_title, "Contract Title" %><br>
+        <%= f.text_field :contract_title, size: "100x5" %><br>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :capes_tags, "Capes Tags" %><br>
+        <%= f.text_field :capes_tags %><br>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :project_description, "Project Description" %><br>
+        <%= f.text_area :project_description, size: "100x12" %><br>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :pd_pm, "Project Director/Manager" %><br>
+        <%= f.text_field :pd_pm, size: "100x5" %><br>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :prime_sub, "Prime or Sub?" %><br>
+        <%= f.select :prime_sub, [['Prime', 'Prime'], ['Sub', 'Sub']] %>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :client, "Client" %><br>
+        <%= f.text_field :client, size: "100x5" %><br>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :end_client, "End Client" %><br>
+        <%= f.text_field :end_client, size: "100x5" %><br>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :client_poc_address, "Client POC Address" %><br>
+        <%= f.text_area :client_poc_address, size: "100x12" %><br>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :client_poc_name_contact, "Client POC Name/Contact" %><br>
+        <%= f.text_area :client_poc_name_contact, size: "100x12" %><br>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :reference, "Ask For Past Performance Reference?" %><br>
+        <%= f.select :reference, [['Yes', 'Yes'], ['No', 'No'], ['', '']] %>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :contract_number, "Contract Number" %><br>
+        <%= f.text_field :contract_number, size: "100x5" %><br>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :contract_value, "Contract Value" %><br>
+        <%= f.text_field :contract_value, size: "100x5" %><br>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :period_of_performance, "Period of Performance" %><br>
+        <%= f.text_field :period_of_performance, size: "100x5" %><br>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :notes, "Notes" %><br>
+        <%= f.text_area :notes, size: "100x12" %><br>
+    </div>
+    <br>
+    <div class="field">
+        <div class="actions">
+            <%= f.submit %>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#cape_capes_tags").tokenInput("/tags");
+        });
+    </script>
+<% end %>
+<br>

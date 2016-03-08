@@ -1,0 +1,115 @@
+<div class="field">
+
+<h1><img src="/assets/logo.png"> Capes Database</h1> <br>
+
+<i class="fa fa-plus">
+    <div class="other_actions">
+        <%= link_to "Add new cape", new_cape_path %>
+    </div>
+</i> <br> <br>
+
+<%= grid(@capes_grid, upper_pagination_panel: true) do |g|
+    
+    g.column do |cape|
+        content_tag(:div, :class => "short-content") do
+            content_tag(:i, :class => "fa fa-pencil") do
+                content_tag(:div, :class => "other_actions") do
+                    link_to "Edit", edit_cape_path(cape)
+                end
+            end
+        end
+    end
+    
+    g.column name:'Project Name', attribute: 'project_name' do |cape|
+        content_tag(:div, :class => "short-content") do
+            simple_format(cape.project_name)
+        end
+    end
+    
+    g.column name:'Contract Title', attribute: 'contract_title' do |cape|
+        content_tag(:div, :class => "medium-content") do
+            simple_format(cape.contract_title)
+        end
+    end
+    
+    g.column name:'Tags', attribute: 'capes_tags' do |cape|
+        content_tag(:div, :class => "medium-content") do
+            cape.capes_tags
+        end
+    end
+    
+    g.column name:'Project Description', attribute: 'project_description' do |cape|
+        content_tag(:div, :class => "long-content") do
+            simple_format(cape.project_description)
+        end
+    end
+    
+    g.column name:'PD/PM', attribute: 'pd_pm' do |cape|
+        content_tag(:div, :class => "short-content") do
+            simple_format(cape.pd_pm)
+        end
+    end
+    
+    g.column name:'Prime or Sub', attribute: 'prime_sub' do |cape|
+        content_tag(:div, :class => "short-content") do
+            cape.prime_sub
+        end
+    end
+    
+    g.column name:'Client', attribute: 'client' do |cape|
+        content_tag(:div, :class => "medium-content") do
+            simple_format(cape.client)
+        end
+    end
+    
+    g.column name:'End Client', attribute: 'end_client' do |cape|
+        content_tag(:div, :class => "medium-content") do
+            simple_format(cape.end_client)
+        end
+    end
+    
+    g.column name:'Client POC Address', attribute: 'client_poc_address' do |cape|
+        content_tag(:div, :class => "medium-content") do
+            simple_format(cape.client_poc_address)
+        end
+    end
+    
+    g.column name:'Client POC Name/Contact', attribute: 'client_poc_name_contact' do |cape|
+        content_tag(:div, :class => "medium-content") do
+            simple_format(cape.client_poc_name_contact)
+        end
+    end
+    
+    g.column name:'Reference?', attribute: 'reference' do |cape|
+        content_tag(:div, :class => "short-content") do
+            cape.reference
+        end
+    end
+    
+    g.column name:'Contract Number', attribute: 'contract_number' do |cape|
+        content_tag(:div, :class => "medium-content") do
+            simple_format(cape.contract_number)
+        end
+    end
+    
+    g.column name:'Contract Value', attribute: 'contract_value' do |cape|
+        content_tag(:div, :class => "medium-content") do
+            simple_format(cape.contract_value)
+        end
+    end
+    
+    g.column name:'Period of Performance', attribute: 'period_of_performance' do |cape|
+        content_tag(:div, :class => "medium-content") do
+            simple_format(cape.period_of_performance)
+        end
+    end
+    
+    g.column name:'Notes', attribute: 'notes' do |cape|
+        content_tag(:div, :class => "medium-content") do
+            simple_format(cape.notes)
+        end
+    end
+    
+end -%>
+
+</div>
